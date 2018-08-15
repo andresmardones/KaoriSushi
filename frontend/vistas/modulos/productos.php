@@ -141,7 +141,13 @@ if ($banner != null) {
 
 				}else{
 
-					$modo = $_SESSION["ordenar"];
+					if (isset($_SESSION["ordenar"])) {
+						
+						$modo = $_SESSION["ordenar"];
+
+					}
+
+					$modo = "DESC";
 
 				}
 				
@@ -192,6 +198,7 @@ if ($banner != null) {
 
 					$item2 = "id_categoria";
 					$valor2 = $categoria["id"];
+					var_dump($categoria["id"]);
 
 				}
 
@@ -220,7 +227,7 @@ if ($banner != null) {
 				
 							<figure>
 								
-								<a href="'.$value["ruta"].'" class="pixelProducto">
+								<a href="'.$url.$value["ruta"].'" class="pixelProducto">
 									
 									<img src="'.$servidor.$value["portada"].'" class="img-responsive">
 
@@ -234,7 +241,7 @@ if ($banner != null) {
 				
 								<small>
 									
-									<a href="'.$value["ruta"].'" class="pixelProducto">
+									<a href="'.$url.$value["ruta"].'" class="pixelProducto">
 										
 										'.$value["titulo"].'<br>
 
@@ -286,7 +293,7 @@ if ($banner != null) {
 				
 								<div class="btn-group pull-right">
 
-									<a href="'.$value["ruta"].'" class="pixelProducto">
+									<a href="'.$url.$value["ruta"].'" class="pixelProducto">
 										
 										<button type="button" class="btn btn-default btn-xs " data-toggle="tooltip" title="Ver producto">
 										
@@ -340,7 +347,7 @@ if ($banner != null) {
 								
 								<figure>
 									
-									<a href="'.$value["ruta"].'" class="pixelProducto">
+									<a href="'.$url.$value["ruta"].'" class="pixelProducto">
 										
 										<img src="'.$servidor.$value["portada"].'" class="img-responsive">
 
@@ -356,7 +363,7 @@ if ($banner != null) {
 									
 									<small>
 										
-										<a href="'.$value["ruta"].'" class="pixelProducto">
+										<a href="'.$url.$value["ruta"].'" class="pixelProducto">
 
 										'.$value["titulo"].'<br>';
 
@@ -409,7 +416,7 @@ if ($banner != null) {
 
 									</button>
 
-									<a href="'.$value["ruta"].'" class="pixelProducto">
+									<a href="'.$url.$value["ruta"].'" class="pixelProducto">
 										
 										<button type="button" class="btn btn-default btn-xs " data-toggle="tooltip" title="Ver producto">
 										

@@ -102,7 +102,7 @@ if(isset($_GET["ruta"])){
 
 	/*=====================================================
 	=            URL'S AMIGABLES SUBCATEGORIAS            =
-	=====================================================*/
+	=====================================================
 	
 	$rutaSubCategorias = ControladorProductos::ctrMostrarSubCategorias($item, $valor);
 
@@ -114,7 +114,7 @@ if(isset($_GET["ruta"])){
 
 		}
 
-	}
+	}*/
 
 	/*=====================================================
 	=            URL'S AMIGABLES DE PRODUCTOS             =

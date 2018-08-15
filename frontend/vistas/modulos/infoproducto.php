@@ -292,8 +292,18 @@ $url = Ruta::ctrRuta();
 				<hr>
 				
 				<!--=================================
-				=            ZONA LUPA              =
+				=    CARACTERISTICAS DEL PRODUCTO   =
 				==================================-->
+
+				<div class="col-xs-12">
+
+					<?php
+
+						echo '<h3 class="text-muted">Ingredientes: </h3><p>'.$infoproducto["descripcion"].'</p>';
+
+					?>
+
+				</div>
 
 				<div class="form-group row">
 					
@@ -325,9 +335,74 @@ $url = Ruta::ctrRuta();
 
 					}
 
+					/*===============================
+					=            ENTREGA            =
+					===============================*/
+					
+					echo '<h4 class="col-md-12 col-sm-0 col-xs-0">
+
+						<hr>
+
+						<span class="label label-default" style="font-weight:100">
+
+							<i class="fa fa-clock-o" style="margin-right:5px"></i>
+							Entregas entre 30-45 min |
+							<i class="fa fa-shopping-cart" style="margin:0px 5px"></i>
+							'.$infoproducto["ventas"].' ventas |
+							<i class="fa fa-eye" style="margin:0px 5px"></i>
+							Visto por <span class="vistas">'.$infoproducto["vistas"].'</span> personas
+
+						</span>
+
+					</h4>
+
+					<h4 class="col-lg-0 col-md-0 col-xs-12">
+
+						<hr>
+
+						<small>
+
+							<i class="fa fa-clock-o" style="margin-right:5px"></i>
+							Entregas entre 30-45 min <br>
+							<i class="fa fa-shopping-cart" style="margin:0px 5px"></i>
+							'.$infoproducto["ventas"].' ventas <br>
+							<i class="fa fa-eye" style="margin:0px 5px"></i>
+							Visto por <span class="vistas">'.$infoproducto["vistas"].'</span> personas
+
+						</small>
+
+					</h4>';
+					
 				?>	
 
 				</div>
+				
+				<!--=================================
+				=         BOTONES DE COMPRA         =
+				==================================-->
+
+				<div class="row botonesCompra">
+					
+					<div class="col-md-6">
+						
+						
+
+					</div>
+
+					<div class="col-md-6">
+						
+						<button class="btn btn-default btn-block btn-lg backColor">
+
+						Agregar al carrito
+
+						<i class="fa fa-shopping-cart"></i>
+
+						</button>
+
+					</div>
+
+				</div>
+
 				
 				<!--=================================
 				=            ZONA LUPA              =
@@ -343,6 +418,364 @@ $url = Ruta::ctrRuta();
 
 		</div>
 
+		<!--=================================
+		=            COMENTARIOS            =
+		==================================-->
+
+		<br>
+
+		<div class="row">
+			
+			<ul class="nav nav-tabs">
+				
+				<li class="active"><a>Comentarios (4)</a></li>
+				<li><a>Ver más</a></li>
+				<li class="pull-right"><a class="text-muted">Promedio de Calificación: 3.5 |
+
+				<i class="fa fa-star text-success"></i>
+				<i class="fa fa-star text-success"></i>
+				<i class="fa fa-star text-success"></i>
+				<i class="fa fa-star-half-o text-success"></i>
+				<i class="fa fa-star-o text-success"></i>
+
+				</a></li>
+
+			</ul>
+
+			<br>
+
+		</div>
+
+		<div class="row comentarios">
+			
+			<div class="panel-group col-md-3 col-sm-6 col-xs-12">
+				
+				<div class="panel panel-default">
+					
+					<div class="panel-heading text-uppercase">
+						
+						Andrés
+						<span class="text-right">
+							
+							<img class="img-circle" src="<?php echo $url; ?>vistas/img/usuarios/40/944.jpg" width="20%">
+
+						</span>
+
+					</div>
+
+					<div class="panel-body"><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nobis eum deserunt ad. Corrupti maxime quisquam velit unde, eum ab magni! Incidunt nam maiores dolores ullam vitae, adipisci fugit omnis!</small></div>
+
+					<div class="panel-footer">
+						
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star-half-o text-success"></i>
+						<i class="fa fa-star-o text-success"></i>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="panel-group col-md-3 col-sm-6 col-xs-12">
+				
+				<div class="panel panel-default">
+					
+					<div class="panel-heading text-uppercase">
+						
+						Andrés
+						<span class="text-right">
+							
+							<img class="img-circle" src="<?php echo $url; ?>vistas/img/usuarios/40/944.jpg" width="20%">
+
+						</span>
+
+					</div>
+
+					<div class="panel-body"><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nobis eum deserunt ad. Corrupti maxime quisquam velit unde, eum ab magni! Incidunt nam maiores dolores ullam vitae, adipisci fugit omnis!</small></div>
+
+					<div class="panel-footer">
+						
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star-half-o text-success"></i>
+						<i class="fa fa-star-o text-success"></i>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="panel-group col-md-3 col-sm-6 col-xs-12">
+				
+				<div class="panel panel-default">
+					
+					<div class="panel-heading text-uppercase">
+						
+						Andrés
+						<span class="text-right">
+							
+							<img class="img-circle" src="<?php echo $url; ?>vistas/img/usuarios/40/944.jpg" width="20%">
+
+						</span>
+
+					</div>
+
+					<div class="panel-body"><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nobis eum deserunt ad. Corrupti maxime quisquam velit unde, eum ab magni! Incidunt nam maiores dolores ullam vitae, adipisci fugit omnis!</small></div>
+
+					<div class="panel-footer">
+						
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star-half-o text-success"></i>
+						<i class="fa fa-star-o text-success"></i>
+
+					</div>
+
+				</div>
+
+			</div>
+			
+			<div class="panel-group col-md-3 col-sm-6 col-xs-12">
+				
+				<div class="panel panel-default">
+					
+					<div class="panel-heading text-uppercase">
+						
+						Andrés
+						<span class="text-right">
+							
+							<img class="img-circle" src="<?php echo $url; ?>vistas/img/usuarios/40/944.jpg" width="20%">
+
+						</span>
+
+					</div>
+
+					<div class="panel-body"><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nobis eum deserunt ad. Corrupti maxime quisquam velit unde, eum ab magni! Incidunt nam maiores dolores ullam vitae, adipisci fugit omnis!</small></div>
+
+					<div class="panel-footer">
+						
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star text-success"></i>
+						<i class="fa fa-star-half-o text-success"></i>
+						<i class="fa fa-star-o text-success"></i>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<hr>
+
+	</div>
+
+</div>
+
+<!--=================================
+=       ARTICULOS RELACIONADOS      =
+==================================-->
+
+<div class="container-fluid productos">
+	
+	<div class="container">
+		
+		<div class="row">
+			
+			<div class="col-xs-12 tituloDestacado">
+
+				
+				<div class="col-sm-6 col-xs-12">
+					
+					<h1><small>Productos Relacionados</small></h1>
+
+				</div>
+
+				<div class="col-sm-6 col-xs-12">
+
+				<?php
+
+					$item = "id";
+					$valor = $infoproducto["id_categoria"];
+
+					$rutaArticulosDestacados = ControladorProductos::ctrMostrarCategorias($item, $valor);
+
+					echo '<a href="'.$url.$rutaArticulosDestacados["ruta"].'">
+						
+							<button class="btn btn-default backColor pull-right">
+								
+								VER MÁS<span class="fa fa-chevron-right"></span>
+
+							</button>
+
+						</a>';
+
+				?>
+					
+					
+
+				</div>
+
+			</div>
+
+			<div class="clearfix"></div>
+
+			<hr>
+
+		</div>
+
+		<?php
+
+		$ordenar = "";
+		$item = "id_categoria";
+		$valor = $infoproducto["id_categoria"];
+		$base = 0;
+		$tope = 4;
+		$modo = "Rand()";
+
+		$relacionados = ControladorProductos::ctrMostrarProductos($ordenar, $item, $valor, $base, $tope, $modo);
+
+		if(!$relacionados){
+
+			echo '<div class="col-xs-12 error404">
+
+				<h1><small>¡Oops!</small></h1>
+
+				<h2>No hay productos relacionados</h2>
+
+			</div>';
+
+		}else{
+
+			echo'<ul class = "grid0">';
+
+			foreach ($relacionados as $key => $value) {
+				
+				echo '<li class="col-md-3 col-sm-6 col-xs-12">
+		
+						<figure>
+							
+							<a href="'.$url.$value["ruta"].'" class="pixelProducto">
+								
+								<img src="'.$servidor.$value["portada"].'" class="img-responsive">
+
+							</a>
+
+						</figure>
+
+						<h4>
+			
+							<small>
+								
+								<a href="'.$url.$value["ruta"].'" class="pixelProducto">
+									
+									'.$value["titulo"].'<br>
+
+									<span style="color:rgba(0,0,0,0)">-</span>';
+
+									if ($value["nuevo"] != 0) {
+										
+										echo '<span class="label label-warning fontSize">Nuevo</span> ';
+
+									}
+
+									if ($value["oferta"] != 0) {
+										
+										echo '<span class="label label-warning fontSize">'.$value["descuentoOferta"].'% Desc</span>';
+
+									}
+
+								echo '</a>
+
+							</small>
+
+						</h4>
+
+						<div class="col-xs-6 precio">';
+
+							if($value["oferta"] != 0){
+
+								echo '<h2>
+
+										<small>
+
+											<strong class="oferta">$'.$value["precio"].'</strong>
+
+										</small>
+
+										<small>$'.$value["precioOferta"].'</small>
+
+									</h2>';
+
+							}else{
+
+								echo '<h2><small>$'.$value["precio"].'</small></h2>';
+
+							}
+			
+						echo '</div>
+
+						<div class="col-xs-6 enlaces">
+			
+							<div class="btn-group pull-right">
+
+								<a href="'.$url.$value["ruta"].'" class="pixelProducto">
+									
+									<button type="button" class="btn btn-default btn-xs " data-toggle="tooltip" title="Ver producto">
+									
+										<i class="fa fa-eye" aria-hidden="true"></i>
+
+									</button>
+
+								</a>
+								
+								<button type="button" class="btn btn-default btn-xs deseos" idProducto="'.$value["id"].'" data-toggle="tooltip" title="Agregar a mi lista de deseos">
+									
+									<i class="fa fa-heart" aria-hidden="true"></i>
+
+								</button> ';
+
+								if($value["oferta"] != 0){
+
+									echo '<button type="button" class="btn btn-default btn-xs agregarCarrito" idProducto="'.$value["id"].'" imagen="'.$servidor.$value["portada"].'" titulo="'.$value["titulo"].'" precio="'.$value["precioOferta"].'" data-toggle="tooltip" title="Agregar al carrito de compras">
+									
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+									</button>';
+
+								}else{
+
+									echo '<button type="button" class="btn btn-default btn-xs agregarCarrito" idProducto="'.$value["id"].'" imagen="'.$servidor.$value["portada"].'" titulo="'.$value["titulo"].'" precio="'.$value["precio"].'" data-toggle="tooltip" title="Agregar al carrito de compras">
+									
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+									</button>';
+
+								}
+				
+							echo '</div>
+
+						</div>
+
+					</li>';
+
+			}
+
+		echo '</ul>';
+
+		}
+
+		?>
+
+	
 	</div>
 
 </div>

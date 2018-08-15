@@ -65,3 +65,41 @@ $(".infoproducto figure.visor img").mousemove(function(event){
 	})
 
 })
+
+/*==========================================
+=            CONTADOR DE VISTAS            =
+==========================================*/
+
+var contador = 0;
+
+$(window).on("load",function(){
+
+	var vistas = $("span.vistas").html();
+
+	contador = Number(vistas) + 1;
+
+	var item = "vistas";
+
+	$("span.vistas").html(contador);
+
+	var urlActual = location.pathname;
+	var ruta = urlActual.split("/");
+
+	var datos = new FormData();
+	datos.append("valor", contador);
+	datos.append("item", item);
+	datos.append("ruta", ruta.pop());
+
+	$.ajax({
+
+		url:rutaOculta+"ajax/producto.ajax.php",
+		method:"POST",
+		data:datos,
+		cache:false,
+		contentType: false,
+		processData:false,
+		succes: function(respuesta){}
+
+	});
+
+})

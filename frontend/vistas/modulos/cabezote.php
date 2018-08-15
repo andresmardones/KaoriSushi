@@ -55,7 +55,7 @@
 					
 					<li><a href="#modaIngreso" data-toggle="modal">Ingresar</a></li>
 					<li>|</li>
-					<li><a href="#modaIngreso" data-toggle="modal">Crear cuenta</a></li>
+					<li><a href="#modalRegistro" data-toggle="modal">Crear cuenta</a></li>
 
 				</ul>
 
@@ -186,7 +186,7 @@
 								$subcategorias = ControladorProductos::ctrMostrarSubCategorias($item, $valor);
 
 								foreach ($subcategorias as $key => $value) {
-									echo'<li><a href="'.$url.$value["ruta"].'" class="pixelSubCategorias">'.$value["subcategoria"].'</a></li>';
+									echo'<li><a href="'.$url.$value["ruta"].'" class="pixelSubCategorias">'.$value["titulo"].'</a></li>';
 								}
 								
 								echo '</ul>
@@ -202,4 +202,135 @@
 	</div>
 </header>
 
+<!--==============================================
+=            VENTANA PARA EL REGISTRO            =
+===============================================-->
 
+<div class="modal fade modalFormulario" id="modalRegistro" role="dialog">
+	
+	<div class="modal-content modal-dialog">
+
+		<div class="modal-body modalTitulo">
+
+			<h3 class="backColor">Registrarse</h3>
+			
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+
+			<!--=======================================
+			=            REGISTRO FACEBOOK            =
+			========================================-->
+
+			<div class="col-sm-6 col-xs-12 facebook" id="btnFacebookRegistro">
+				
+				<p>
+					<i class="fa fa-facebook"></i>
+					Registro con Facebook
+				</p>
+
+			</div>
+
+			<!--=======================================
+			=             REGISTRO GOOGLE             =
+			========================================-->
+			
+			<div class="col-sm-6 col-xs-12 google" id="btnGoogleRegistro">
+				
+				<p>
+					<i class="fa fa-google"></i>
+					Registro con Google
+				</p>
+
+			</div>
+
+			<!--=======================================
+			=            REGISTRO DIRECTO             =
+			========================================-->
+			
+			<form method="post" onsubmit="return registroUsuario()">
+				
+				<hr>
+
+				<div class="form-group">
+					
+					<div class="input-group">
+						
+						<span class="input-group-addon">
+							
+							<i class="glyphicon glyphicon-user"></i>
+
+						</span>
+
+						<input type="text" class="form-control text-uppercase" id="regUsuario" name="regUsuario" placeholder="Nombre Completo" required>
+
+					</div>
+
+				</div>
+
+				<div class="form-group">
+					
+					<div class="input-group">
+						
+						<span class="input-group-addon">
+							
+							<i class="glyphicon glyphicon-envelope"></i>
+
+						</span>
+
+						<input type="email" class="form-control" id="regEmail" name="regEmail" placeholder="Correo Electrónico" required>
+
+					</div>
+
+				</div>
+
+				<div class="form-group">
+					
+					<div class="input-group">
+						
+						<span class="input-group-addon">
+							
+							<i class="glyphicon glyphicon-lock"></i>
+
+						</span>
+
+						<input type="password" class="form-control" id="regPassword" name="regPassword" placeholder="Contraseña" required>
+
+					</div>
+
+				</div>
+
+				<!--============================================
+				=            TERMINOS Y CONDICIONES            =
+				=============================================-->
+				
+				<div class="checkbox">
+					
+					<label>
+						
+						<input id="regTerminos" type="checkbox">
+
+						<small>
+							
+							Al registrarse, usted acepta nuestras condiciones de uso y políticas de privacidad 
+							<a href="https://www.iubenda.com/privacy-policy/35270453" class="iubenda-white iubenda-embed " title="Condiciones de uso y políticas de privacidad">Leer más</a> <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>  
+
+						</small>
+
+					</label>
+
+				</div>
+
+				<input type="submit" class="btn btn-default backColor btn-block" value="ENVIAR">
+
+			</form>
+			
+		</div>
+
+		<div class="modal-footer">
+			
+			¿Ya tienes una cuenta? | <strong><a href="#modalIngreso" data-dismiss="modal" data-toggle="modal">Ingresar</a></strong>
+
+		</div>
+
+	</div>
+
+</div>

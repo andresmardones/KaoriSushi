@@ -23,7 +23,7 @@ class ControladorProductos{
 
 	static public function ctrMostrarSubCategorias($item, $valor){
 
-		$tabla = "subcategorias";
+		$tabla = "productos";
 
 		$respuesta = ModeloProductos::mdlMostrarSubCategorias($tabla, $item, $valor);
 
@@ -115,5 +115,20 @@ class ControladorProductos{
 		return $respuesta;
 
 	}
+
+	/*=================================================
+	=            Actualizar Vista Producto            =
+	=================================================*/
+
+	static public function ctrActualizarVistaProducto($datos, $item){
+
+		$tabla = "productos";
+
+		$respuesta = ModeloProductos::mdlActualizarVistaProducto($tabla, $datos, $item);
+
+		return $respuesta;
+
+	}
+
 	
 }
