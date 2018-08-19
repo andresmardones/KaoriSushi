@@ -306,7 +306,7 @@
 					
 					<label>
 						
-						<input id="regTerminos" type="checkbox">
+						<input id="regPoliticas" type="checkbox">
 
 						<small>
 							
@@ -318,6 +318,13 @@
 					</label>
 
 				</div>
+
+				<?php
+
+					$registro = new ControladorUsuarios();
+					$registro -> ctrRegistroUsuario();
+
+				?>
 
 				<input type="submit" class="btn btn-default backColor btn-block" value="ENVIAR">
 

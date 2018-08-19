@@ -37,6 +37,7 @@
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/flexslider.css">
+	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/sweetalert.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet"> 
@@ -61,6 +62,7 @@
 	<script src="<?php echo $url; ?>vistas/js/plugins/jquery.easing.js"></script>
 	<script src="<?php echo $url; ?>vistas/js/plugins/jquery.scrollUp.js"></script>
 	<script src="<?php echo $url; ?>vistas/js/plugins/jquery.flexslider.js"></script>
+	<script src="<?php echo $url; ?>vistas/js/plugins/sweetalert.min.js"></script>
 
 </head>
 <body>
@@ -132,7 +134,7 @@ if(isset($_GET["ruta"])){
 	=            LISTA BLANCA URL'S AMIGABLES            =
 	====================================================*/
 	
-	if ($ruta != null || $rutas[0] == "ultimos-agregados" || $rutas[0] == "rolls-mas-vendidos" ) {
+	if ($ruta != null || $rutas[0] == "ultimos-agregados" || $rutas[0] == "rolls-mas-vendidos" || $rutas[0] == "rolls-mas-vistos") {
 
 		include "modulos/productos.php";
 
@@ -173,6 +175,7 @@ if(isset($_GET["ruta"])){
 <script src="<?php echo $url; ?>vistas/js/slide.js"></script>
 <script src="<?php echo $url; ?>vistas/js/buscador.js"></script>
 <script src="<?php echo $url; ?>vistas/js/infoproducto.js"></script>
+<script src="<?php echo $url; ?>vistas/js/usuarios.js"></script>
 	
 </body>
 </html>

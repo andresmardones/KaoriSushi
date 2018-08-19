@@ -179,28 +179,33 @@ if ($banner != null) {
 				$valor2 = null;
 				$ordenar = "ventas";
 
+			}elseif ($rutas[0] == "rolls-mas-vistos") {
+				
+				$item2 = null;
+				$valor2 = null;
+				$ordenar = "vistas";
+
 			}else{
 
 				$ordenar = "id";
 				$item1 = "ruta";
-				$valor1 = $ruta[0];
+				$valor1 = $rutas[0];
 
 				$categoria = ControladorProductos::ctrMostrarCategorias($item1, $valor1);
 
-				if (!$categoria) {
+				/*if (!$categoria) {
 					
 					$subCategorias = ControladorProductos::ctrMostrarSubCategorias($item1, $valor1);
 
 					$item2 = "id_categoria";
 					$valor2 = $subCategorias[0]["id"];
 
-				}else{
+				}else{*/
 
 					$item2 = "id_categoria";
 					$valor2 = $categoria["id"];
-					var_dump($categoria["id"]);
 
-				}
+				//}
 
 			}
 

@@ -42,9 +42,9 @@ if($banner != null) {
 
 <?php
 
-$titulosModulos = array("ULTIMOS AGREGADOS", "ROLLS MÁS VENDIDOS");
+$titulosModulos = array("ULTIMOS AGREGADOS", "ROLLS MÁS VENDIDOS", "ROLLS MÁS VISTOS");
 
-$rutaModulos = array("ultimos-agregados", "rolls-mas-vendidos");
+$rutaModulos = array("ultimos-agregados", "rolls-mas-vendidos", "rolls-mas-vistos");
 
 $item = null;
 $valor = null;
@@ -56,7 +56,7 @@ if ($titulosModulos[0] == "ULTIMOS AGREGADOS") {
 
 	$ordenar = "id";
 
-	$vistas = ControladorProductos::ctrMostrarProductos($ordenar, $item, $valor, $base, $tope, $modo);
+	$id = ControladorProductos::ctrMostrarProductos($ordenar, $item, $valor, $base, $tope, $modo);
 
 }
 
@@ -68,7 +68,15 @@ if ($titulosModulos[1] == "ROLLS MÁS VENDIDOS") {
 
 }
 
-$modulos = array($vistas, $ventas);
+if ($titulosModulos[2] == "ROLLS MÁS VISTOS") {
+
+	$ordenar = "vistas";
+
+	$vistas = ControladorProductos::ctrMostrarProductos($ordenar, $item, $valor, $base, $tope, $modo);
+
+}
+
+$modulos = array($id, $ventas, $vistas);
 
 for ($i= 0; $i < count($titulosModulos) ; $i++){ 
 
