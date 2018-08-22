@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 19-08-2018 a las 22:58:45
--- Versión del servidor: 10.1.34-MariaDB
--- Versión de PHP: 7.2.7
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 22-08-2018 a las 20:45:34
+-- Versión del servidor: 10.1.32-MariaDB
+-- Versión de PHP: 7.2.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -136,7 +136,7 @@ CREATE TABLE `productos` (
 
 INSERT INTO `productos` (`id`, `id_categoria`, `id_subcategoria`, `tipo`, `ruta`, `titulo`, `titular`, `descripcion`, `detalles`, `precio`, `portada`, `vistas`, `ventas`, `ofertadoPorCategoria`, `ofertadoPorSubCategoria`, `oferta`, `precioOferta`, `descuentoOferta`, `imgOferta`, `finOferta`, `nuevo`, `peso`, `entrega`, `fecha`) VALUES
 (1, 1, 0, 'fisico', 'kani-roll', 'Kani Roll', 'Lorem ipsum', 'Kanikama, queso crema, palta, envuelto en sesamo o ciboulette', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 3400, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 1, 0, 0, '', '0000-00-00 00:00:00', 1, 1, 10, '2018-08-14 20:14:21'),
-(2, 1, 0, 'fisico', 'especial-ebi-palta', 'Especial Ebi Palta', 'Lorem ipsum', 'Camaron, queso crema, ciboulette, envuelto en palta', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4200, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 1, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:18:16'),
+(2, 1, 0, 'fisico', 'especial-ebi-palta', 'Especial Ebi Palta', 'Lorem ipsum', 'Camaron, queso crema, ciboulette, envuelto en palta', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4200, 'vistas/img/productos/accesorios/accesorio04.jpg', 1, 0, 0, 0, 1, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-20 02:11:33'),
 (3, 1, 0, 'fisico', 'especial-ebi-salmon', 'Especial Ebi Salmon', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 3400, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:18:18'),
 (4, 1, 0, 'fisico', 'tako-ebi-palta', 'Tako Ebi Palta ', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4200, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:18:21'),
 (5, 1, 0, 'fisico', 'california-tori', 'California Tori', 'Lorem ipsum', 'Lorem ipsum dolor sit', '{\"Opcion\":[\"Sesamo\",\"Ciboulette\"]}', 4200, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 1, 1, 10, '2018-08-14 20:18:23'),
@@ -248,6 +248,7 @@ CREATE TABLE `usuarios` (
   `modo` text COLLATE utf8_spanish_ci NOT NULL,
   `foto` text COLLATE utf8_spanish_ci NOT NULL,
   `verificacion` int(11) NOT NULL,
+  `emailEncriptado` text COLLATE utf8_spanish_ci NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -255,8 +256,10 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `password`, `email`, `modo`, `foto`, `verificacion`, `fecha`) VALUES
-(1, 'andres', '$2a$07$asxx54ahjppf45sd87a5au7n90B34E1DKjnbuoGG.jU3ZlQf.6lU.', 'an@fr.com', 'directo', '', 1, '2018-08-16 22:40:34');
+INSERT INTO `usuarios` (`id`, `nombre`, `password`, `email`, `modo`, `foto`, `verificacion`, `emailEncriptado`, `fecha`) VALUES
+(14, 'Ana', '$2a$07$asxx54ahjppf45sd87a5auTsiojGhkfK.OQTkxHHkIkGfYei1LyrW', 'ana@hotmail.com', 'directo', '', 1, '169d9928f1e26d9268036511e114f08b', '2018-08-21 03:56:25'),
+(16, 'Jose', '$2a$07$asxx54ahjppf45sd87a5auL/JSJiKUwe1trfwTLd9uQWXI6T4KdC2', 'anaq@hotmail.com', 'directo', '', 1, '87e50196a1d2105fca85e7d50dc7e101', '2018-08-21 03:57:47'),
+(17, 'juan', '$2a$07$asxx54ahjppf45sd87a5auyitno63cywT9o5e09.Vc7kd4Mbrf9eG', 'juan@hotmail.com', 'directo', '', 0, 'a34d59b0213eb82d3a62b8e7bf586362', '2018-08-22 17:25:24');
 
 --
 -- Índices para tablas volcadas
@@ -348,7 +351,7 @@ ALTER TABLE `subcategorias`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

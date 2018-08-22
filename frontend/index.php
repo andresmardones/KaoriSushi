@@ -12,7 +12,7 @@ require_once "modelos/usuarios.modelo.php";
 
 require_once "modelos/rutas.php";
 
-require_once "PHPMailer/src/PHPMailer.php";
+require_once "PHPMailer/PHPMailerAutoload.php";
 
 $plantilla = new ControladorPlantilla();
 $plantilla -> plantilla();

@@ -142,9 +142,9 @@ if(isset($_GET["ruta"])){
 
 		include "modulos/infoproducto.php";
 	
-	}else if($rutas[0] == "buscador") {
+	}else if($rutas[0] == "buscador" || $rutas[0] == "verificar" || $rutas[0] == "salir") {
 
-		include "modulos/buscador.php";
+		include "modulos/".$rutas[0].".php";
 
 	}else{
 
@@ -176,6 +176,30 @@ if(isset($_GET["ruta"])){
 <script src="<?php echo $url; ?>vistas/js/buscador.js"></script>
 <script src="<?php echo $url; ?>vistas/js/infoproducto.js"></script>
 <script src="<?php echo $url; ?>vistas/js/usuarios.js"></script>
+<script src="<?php echo $url; ?>vistas/js/registroFacebook.js"></script>
+
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '732135490466528',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v3.1'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 	
 </body>
 </html>
