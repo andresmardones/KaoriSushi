@@ -3,6 +3,66 @@
 	$servidor = Ruta::ctrRutaServidor();
 	$url = Ruta::ctrRuta();
 
+
+	/*=====================================================
+	=            CREAR EL OBJETO API DE GOOGLE            =
+	=====================================================*/
+	
+	$cliente = new Google_Client();
+	$cliente->setAuthConfig('modelos/client_secret.json');
+	$cliente->setAccessType("offline");
+	$cliente->setScopes(['profile','email']);
+
+	/*=================================================
+	=            RUTA PARA EL LOGIN GOOGLE            =
+	=================================================*/
+	
+	$rutaGoogle = $cliente->createAuthUrl();
+	
+	/*=========================================================
+	=            RECIBIR LA VARIABLE GET DE GOOGLE            =
+	=========================================================*/
+	
+	if (isset($_GET["code"])) {
+		
+		$token = $cliente->authenticate($_GET["code"]);
+
+		$_SESSION['id_token_google'] = $token;
+
+		$cliente->setAccessToken($token);
+
+	}
+
+	/*==============================================================
+	=            RECIBIMOS LOS DATOS CIFRADOS DE GOOGLE            =
+	==============================================================*/
+	
+	if ($cliente->getAccessToken()) {
+		
+		$item = $cliente->verifyIdToken();
+
+		$datos = array("nombre" => $item["name"],
+		 			   "password" => "null",
+					   "email" => $item["email"],
+					   "foto" => $item["picture"],
+					   "modo" => "google",
+					   "verificacion" => 0,
+					   "emailEncriptado" => "null"); 
+
+		$respuesta = ControladorUsuarios::ctrRegistroRedesSociales($datos);
+
+		echo '<script>
+
+			setTimeout(function(){
+
+				window.location = localStorage.getItem("rutaActual");
+
+			},1);
+
+			</script>';
+
+	}
+
 ?>
 
 <!--=========================
@@ -83,7 +143,37 @@
 							<li>|</li>
 							<li><a href="'.$url.'salir">Salir</a></li>';
 
+
 						}
+
+						if ($_SESSION["modo"] == "facebook"){
+
+							echo '<li>
+
+									<img class="img-circle" src="'.$_SESSION["foto"].'" width="10%">
+
+							</li>
+							<li><a href="'.$url.'perfil">Ver Perfil</a></li>
+							<li>|</li>
+							<li><a href="'.$url.'salir" class="salir">Salir</a></li>';
+
+						}
+
+						if ($_SESSION["modo"] == "google"){
+
+							echo '<li>
+
+									<img class="img-circle" src="'.$_SESSION["foto"].'" width="10%">
+
+							</li>
+							<li><a href="'.$url.'perfil">Ver Perfil</a></li>
+							<li>|</li>
+							<li><a href="'.$url.'salir">Salir</a></li>';
+
+						}
+
+
+							
 
 					}
 
@@ -262,7 +352,7 @@
 			=            REGISTRO FACEBOOK            =
 			========================================-->
 
-			<div class="col-sm-6 col-xs-12 facebook" id="btnFacebookRegistro">
+			<div class="col-sm-6 col-xs-12 facebook">
 				
 				<p>
 					<i class="fa fa-facebook"></i>
@@ -275,14 +365,16 @@
 			=             REGISTRO GOOGLE             =
 			========================================-->
 			
-			<div class="col-sm-6 col-xs-12 google" id="btnGoogleRegistro">
-				
-				<p>
-					<i class="fa fa-google"></i>
-					Registro con Google
-				</p>
+			<a href="<?php echo $rutaGoogle ?>">
+				<div class="col-sm-6 col-xs-12 google">
+					
+					<p>
+						<i class="fa fa-google"></i>
+						Registro con Google
+					</p>
 
-			</div>
+				</div>
+			</a>
 
 			<!--=======================================
 			=            REGISTRO DIRECTO             =
@@ -403,7 +495,7 @@
 			=            INGRESO FACEBOOK             =
 			========================================-->
 
-			<div class="col-sm-6 col-xs-12 facebook" id="btnFacebookRegistro">
+			<div class="col-sm-6 col-xs-12 facebook">
 				
 				<p>
 					<i class="fa fa-facebook"></i>
@@ -416,14 +508,16 @@
 			=             INGRESO GOOGLE              =
 			========================================-->
 			
-			<div class="col-sm-6 col-xs-12 google" id="btnGoogleRegistro">
-				
-				<p>
-					<i class="fa fa-google"></i>
-					Ingreso con Google
-				</p>
+			<a href="<?php echo $rutaGoogle ?>">
+				<div class="col-sm-6 col-xs-12 google">
+					
+					<p>
+						<i class="fa fa-google"></i>
+						Ingreso con Google
+					</p>
 
-			</div>
+				</div>
+			</a>
 
 			<!--=======================================
 			=            INGRESO DIRECTO             =

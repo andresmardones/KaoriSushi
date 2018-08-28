@@ -2,7 +2,7 @@
 =            BOTON FACEBOOK            =
 ======================================*/
 
-$("#btnFacebookRegistro").click(function(){
+$(".facebook").click(function(){
 
 	FB.login(function(response){
 
@@ -33,7 +33,7 @@ function statusChangeCallBack(response){
 
 	if (response.status === 'connected') {
 
-		textApi();
+		testApi();
 
 	}else{
 
@@ -68,7 +68,7 @@ function testApi(){
 
 	FB.api('/me?fields=id,name,email,picture',function(response){
 
-		if (response.email == "undefined") {
+		if (response.email == null) {
 
 			swal({
 
@@ -83,7 +83,7 @@ function testApi(){
 			function(isConfirm){
 
 					if(isConfirm){
-						window.location = localStorage.getItem("rutaActual");
+						window.location = localStorage.getItem("rutaActual"); 
 					}
 
 			});
@@ -91,7 +91,7 @@ function testApi(){
 		}else{
 
 			var email = response.email;
-			var nombre = response.nombre;
+			var nombre = response.name;
 			var foto = "http://graph.facebook.com/"+response.id+"/picture?type=large";
 
 			var datos = new FormData();
@@ -101,8 +101,68 @@ function testApi(){
 
 			$.ajax({
 
-				
+				url:rutaOculta+"ajax/usuarios.ajax.php",
+				method:"POST",
+				data:datos,
+				cache:false,
+				contentType:false,
+				processData:false,
+				success:function(respuesta){
+
+					if (respuesta == "ok") {
+
+						window.location = localStorage.getItem("rutaActual");
+
+					}else{
+
+						swal({
+
+							title: "¡ERROR!",
+							text: "El correo electrónico "+email+"ya está registrado con un método diferente a Facebook",
+							type: "error",
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+
+						},
+
+						function(isConfirm){
+
+								if(isConfirm){
+									
+									FB.getLoginStatus(function(response){
+
+										if (response.status === 'connected') {
+
+											FB.logout(function(response){
+
+												deleteCookie("fblo_732135490466528");
+
+												setTimeout(function(){
+
+													window.location=rutaOculta+"salir";
+
+												},500)
+
+											});
+
+											function deleteCookie(name){
+
+												document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+
+											}
+
+										}
+
+									})
+
+								}
+
+						});
+
+					}
 					
+				}
+
 			})
 
 		}
@@ -110,3 +170,39 @@ function testApi(){
 	})
 
 }
+
+/*=========================================
+=            SALIR DE FACEBOOK            =
+=========================================*/
+
+$(".salir").click(function(e){
+
+	e.preventDefault();
+
+	FB.getLoginStatus(function(response){
+
+		if (response.status === 'connected') {
+
+			FB.logout(function(response){
+
+				deleteCookie("fblo_732135490466528");
+
+				setTimeout(function(){
+
+					window.location=rutaOculta+"salir";
+
+				},500)
+
+			});
+
+			function deleteCookie(name){
+
+				document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+
+			}
+
+		}
+
+	})
+
+})

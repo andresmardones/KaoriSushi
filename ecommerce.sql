@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-08-2018 a las 20:45:34
+-- Tiempo de generación: 28-08-2018 a las 19:35:52
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 7.2.5
 
@@ -147,20 +147,20 @@ INSERT INTO `productos` (`id`, `id_categoria`, `id_subcategoria`, `tipo`, `ruta`
 (10, 2, 0, 'fisico', 'sake-hot-roll', 'Sake Hot Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4000, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 1, 1, 10, '2018-08-14 20:18:34'),
 (11, 2, 0, 'fisico', 'kani-hot-roll', 'Kani Hot Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4000, 'vistas/img/productos/accesorios/accesorio04.jpg', 1, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 1, 1, 10, '2018-08-16 02:03:00'),
 (12, 2, 0, 'fisico', 'tori-premmium-hot-roll', 'Tori Premmium Hot Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', '{\"Opcion\":[\"Tempura\",\"Panko\"]}', 4200, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 1, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 1, 1, 10, '2018-08-14 20:18:41'),
-(13, 2, 0, 'fisico', 'ebi-sake-hot-roll', 'Ebi Sake Hot Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4600, 'vistas/img/productos/accesorios/accesorio04.jpg', 2, 0, 1, 0, 1, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-18 02:47:28'),
+(13, 2, 0, 'fisico', 'ebi-sake-hot-roll', 'Ebi Sake Hot Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4600, 'vistas/img/productos/accesorios/accesorio04.jpg', 4, 0, 1, 0, 1, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-28 03:32:06'),
 (14, 2, 0, 'fisico', 'pollo-ebi-furai', 'Pollo Ebi Furai', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4200, 'vistas/img/productos/accesorios/accesorio04.jpg', 1, 0, 1, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-18 02:45:48'),
-(15, 3, 0, 'fisico', 'zukkini-roll', 'Zukkini Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4500, 'vistas/img/productos/accesorios/accesorio04.jpg', 1, 0, 1, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-15 03:48:25'),
-(16, 3, 0, 'fisico', 'kinoko-roll', 'Kinoko Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4200, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:18:53'),
+(15, 3, 0, 'fisico', 'zukkini-roll', 'Zukkini Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4500, 'vistas/img/productos/accesorios/accesorio04.jpg', 2, 0, 1, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-27 21:58:18'),
+(16, 3, 0, 'fisico', 'kinoko-roll', 'Kinoko Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4200, 'vistas/img/productos/accesorios/accesorio04.jpg', 4, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-28 03:31:41'),
 (17, 3, 0, 'fisico', 'tenohira-roll', 'Tenohira Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4500, 'vistas/img/productos/accesorios/accesorio04.jpg', 1, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-16 00:19:44'),
 (18, 4, 0, 'fisico', 'ebi-oriental-roll', 'Ebi Oriental Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4300, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:18:59'),
-(19, 4, 0, 'fisico', 'tori-oriental-roll', 'Tori Oriental Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4000, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 1, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:19:00'),
-(20, 4, 0, 'fisico', 'kinoko-oriental-roll', 'Kinoko Oriental Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4000, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 1, 1, 10, '2018-08-14 20:19:03'),
+(19, 4, 0, 'fisico', 'tori-oriental-roll', 'Tori Oriental Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4000, 'vistas/img/productos/accesorios/accesorio04.jpg', 1, 0, 0, 0, 1, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-28 03:21:18'),
+(20, 4, 0, 'fisico', 'kinoko-oriental-roll', 'Kinoko Oriental Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4000, 'vistas/img/productos/accesorios/accesorio04.jpg', 3, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 1, 1, 10, '2018-08-28 03:13:35'),
 (21, 5, 0, 'fisico', 'chiri-tori-roll', 'Chiri Tori Roll', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4500, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:19:05'),
-(22, 5, 0, 'fisico', 'acevichado', 'Acevichado', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4800, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 1, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:19:06'),
-(23, 5, 0, 'fisico', 'chimichurri', 'Chimichurri', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4600, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 1, 1, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:19:09'),
+(22, 5, 0, 'fisico', 'acevichado', 'Acevichado', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4800, 'vistas/img/productos/accesorios/accesorio04.jpg', 2, 0, 1, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-28 03:23:27'),
+(23, 5, 0, 'fisico', 'chimichurri', 'Chimichurri', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 4600, 'vistas/img/productos/accesorios/accesorio04.jpg', 1, 0, 0, 1, 1, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-28 03:22:29'),
 (24, 7, 0, 'fisico', 'gyosas-cerdo', 'Gyosas de Cerdo', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 3000, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 1, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:19:21'),
-(25, 7, 0, 'fisico', 'gyosas-pollo', 'Gyosas de Pollo', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 3000, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 1, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:19:23'),
-(26, 7, 0, 'fisico', 'gyosas-camaron', 'Gyosas de Camaron', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 3000, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 1, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:19:26'),
+(25, 7, 0, 'fisico', 'gyosas-pollo', 'Gyosas de Pollo', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 3000, 'vistas/img/productos/accesorios/accesorio04.jpg', 4, 0, 0, 1, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-28 03:30:37'),
+(26, 7, 0, 'fisico', 'gyosas-camaron', 'Gyosas de Camaron', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 3000, 'vistas/img/productos/accesorios/accesorio04.jpg', 1, 0, 0, 1, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-27 21:59:11'),
 (27, 7, 0, 'fisico', 'sake-furai', 'Sake Furai', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 3200, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 1, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 1, 1, 10, '2018-08-14 20:19:29'),
 (28, 7, 0, 'fisico', 'tori-furai', 'Tori Furai', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 3200, 'vistas/img/productos/accesorios/accesorio04.jpg', 0, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-14 20:19:30'),
 (29, 7, 0, 'fisico', 'ebi-furai', 'Ebi Furai', 'Lorem ipsum', 'Lorem ipsum dolor sit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', 3200, 'vistas/img/productos/accesorios/accesorio04.jpg', 7, 0, 0, 0, 0, 0, 0, '', '0000-00-00 00:00:00', 0, 1, 10, '2018-08-15 21:17:29'),
@@ -259,7 +259,8 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`id`, `nombre`, `password`, `email`, `modo`, `foto`, `verificacion`, `emailEncriptado`, `fecha`) VALUES
 (14, 'Ana', '$2a$07$asxx54ahjppf45sd87a5auTsiojGhkfK.OQTkxHHkIkGfYei1LyrW', 'ana@hotmail.com', 'directo', '', 1, '169d9928f1e26d9268036511e114f08b', '2018-08-21 03:56:25'),
 (16, 'Jose', '$2a$07$asxx54ahjppf45sd87a5auL/JSJiKUwe1trfwTLd9uQWXI6T4KdC2', 'anaq@hotmail.com', 'directo', '', 1, '87e50196a1d2105fca85e7d50dc7e101', '2018-08-21 03:57:47'),
-(17, 'juan', '$2a$07$asxx54ahjppf45sd87a5auyitno63cywT9o5e09.Vc7kd4Mbrf9eG', 'juan@hotmail.com', 'directo', '', 0, 'a34d59b0213eb82d3a62b8e7bf586362', '2018-08-22 17:25:24');
+(17, 'juan', '$2a$07$asxx54ahjppf45sd87a5auyitno63cywT9o5e09.Vc7kd4Mbrf9eG', 'juan@hotmail.com', 'directo', '', 0, 'a34d59b0213eb82d3a62b8e7bf586362', '2018-08-22 17:25:24'),
+(26, 'Andres Mardones', 'null', 'andres.mardo@gmail.com', 'google', 'https://lh3.googleusercontent.com/-Oos0DPBfj48/AAAAAAAAAAI/AAAAAAAAAAA/APUIFaPRr2YGc3q2li9QSjSMVc_Vfg3SaA/s96-c/photo.jpg', 0, 'null', '2018-08-28 03:11:05');
 
 --
 -- Índices para tablas volcadas
@@ -351,7 +352,7 @@ ALTER TABLE `subcategorias`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
